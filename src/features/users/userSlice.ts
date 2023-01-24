@@ -13,9 +13,14 @@ export interface UserInterface {
 export interface UserState {
   users: UserInterface[];
 }
+
+const usersFromLocalStorage = localStorage.getItem('users');
+
 const initialState: UserState = {
-  users: [],
+  users:
+    usersFromLocalStorage !== null ? JSON.parse(usersFromLocalStorage) : [],
 };
+
 const userSlice = createSlice({
   name: 'user',
   initialState,
@@ -42,10 +47,16 @@ const userSlice = createSlice({
       } else {
         state.users.push(currentUser);
       }
+      // set to local storage
+      localStorage.setItem('users', JSON.stringify(state.users));
+    },
+    removeAllUsers: (state) => {
+      state.users = [];
+      localStorage.removeItem('users');
     },
   },
 });
 
-export const { setUsers } = userSlice.actions;
+export const { setUsers, removeAllUsers } = userSlice.actions;
 
 export default userSlice.reducer;
