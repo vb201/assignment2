@@ -5,12 +5,6 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
 import CreateUsers from './modules/Users/CreateUsers';
 import ViewUsers from './modules/Users/ViewUsers';
 function App() {
