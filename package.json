@@ -28,12 +28,6 @@
     "format": "prettier --config .prettierrc src/**/*.tsx --write",
     "serve": "serve -s build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "prettier": "eslint-config-standard-typescript-prettier/prettier",
   "browserslist": {
     "production": [
