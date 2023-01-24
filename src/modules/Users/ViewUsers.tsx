@@ -1,9 +1,9 @@
 import React from 'react';
 import './test.css';
 import { useAppSelector } from '../../hooks/redux';
-import Header from '../../components/Header/';
+import Header from '../../components/Header/index';
 import { UserInterface } from '../../features/users/userSlice';
-import ViewUserCard from '../../components/ViewUserCard/';
+import ViewUserCard from '../../components/ViewUserCard/index';
 
 const ViewUsers = () => {
   const users = useAppSelector((state) => state.user.users);

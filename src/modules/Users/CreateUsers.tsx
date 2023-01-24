@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Header from '../../components/Header/';
-import CreateUserForm from '../../components/CreateUserForm/';
+import Header from '../../components/Header/index';
+import CreateUserForm from '../../components/CreateUserForm/index';
 
 import type { Property } from 'csstype';
 

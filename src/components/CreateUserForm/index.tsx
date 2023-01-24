@@ -13,7 +13,7 @@ import {
 } from 'antd';
 import { UserInterface, setUsers } from '../../features/users/userSlice';
 import { useAppDispatch } from '../../hooks/redux';
-import ViewUserCard from '../ViewUserCard/';
+import ViewUserCard from '../ViewUserCard/index';
 
 const CheckboxGroup = Checkbox.Group;
 
