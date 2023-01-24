@@ -1,4 +1,5 @@
 import { Menu, MenuProps } from 'antd';
+import { Menu, MenuProps } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { removeAllUsers } from '../../features/users/userSlice';
@@ -61,6 +62,13 @@ const Header = () => {
 
   return (
     <>
+      <Menu
+        onClick={onClick}
+        theme="dark"
+        selectedKeys={[current]}
+        mode="horizontal"
+        items={menuItems}
+      />
       <Menu
         onClick={onClick}
         theme="dark"
