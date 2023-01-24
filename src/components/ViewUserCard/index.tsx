@@ -15,7 +15,6 @@ const ViewUserCard: React.FC<ViewUserCardProps> = ({
   border = true,
 }: ViewUserCardProps) => {
   return (
-    // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
     <div className={border ? 'card' : 'card-no-border'}>
       <div className="card-header">
         {profilePicture != null ? (

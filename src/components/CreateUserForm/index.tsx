@@ -75,7 +75,6 @@ const CreateUserForm = () => {
     const isJPEG = imageType === 'image/jpeg';
 
     if (!isPNG && !isJPG && !isJPEG) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       message.error('Profile image is not in supported image format.');
       return false;
     }
@@ -132,7 +131,6 @@ const CreateUserForm = () => {
       const isJPG = file.type === 'image/jpg';
       const isJPEG = file.type === 'image/jpeg';
       if (!isPNG && !isJPG && !isJPEG) {
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         message.error(`${file.name} is not in supported image format.`);
       }
 
@@ -181,7 +179,6 @@ const CreateUserForm = () => {
         }
       })
       .catch((errorInfo) => {
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         message.error('Please fill all the required fields');
       });
   };
@@ -205,11 +202,9 @@ const CreateUserForm = () => {
       .validateFields()
       .then(() => {
         form.submit();
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         message.success('Form submitted successfully');
       })
       .catch(() => {
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
         message.error('Unable to submit form');
       });
   };
